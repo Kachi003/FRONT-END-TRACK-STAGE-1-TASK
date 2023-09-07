@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>FRONT-END TRACK STAGE 1 TASK </title>
+</head>
+<body>
+    <div class="container">
+        <div class="subcontainer">
+
+            <img src="Images\Snapchat-651600873.jpg" data-testid="slackDisplayImage" class="myImage" alt="madumereDavid">
+
+            <div class="intro">
+                <span class="greetings">Hi, I am</span>
+                <span data-testid="slackUserName" class="userName"> Madumere David.</span>
+            </div>
+
+            <div class="track" data-testid="myTrack">FRONTEND.</div>
+
+            <div class="time" data-testid="currentUTCTime">
+                <span class="day"></span>,
+                <span class="currentHours"></span>:
+                <span class="currentMinutes"></span>:
+                <span class="currentSeconds"></span>.
+            </div>
+
+            <a href="https://github.com/Kachi003/FRONT-END-TRACK-STAGE-1-TASK" data-testid="githubURL">Visit Repository</a>
+
+        </div>
+    </div>
+
+    <script>
+
+        let days=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+
+        let currentDay = document.querySelector(".day");
+        let currentHours = document.querySelector(".currentHours");
+        let currentMInutes = document.querySelector(".currentMinutes");
+        let currentSeconds = document.querySelector(".currentSeconds");
+
+
+
+
+        function loadTime() {
+            
+        let dateObject = new Date();
+
+        let day= dateObject.getDay();
+        let hours = dateObject.getHours();
+        let minutes = dateObject.getMinutes();
+        let seconds = dateObject.getSeconds();
+        
+        currentDay.innerHTML= days[day];
+        currentHours.innerHTML= hours;
+        currentMInutes.innerHTML= minutes;
+        currentSeconds.innerHTML= seconds;
+            
+        }
+
+        setInterval(loadTime, 1000);
+
+        
+
+
+    </script>
+</body>
+</html>
