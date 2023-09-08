@@ -48,9 +48,9 @@
         let dateObject = new Date();
 
         let day= dateObject.getDay();
-        let hours = dateObject.getHours();
-        let minutes = dateObject.getMinutes();
-        let seconds = dateObject.getSeconds();
+        let hours = dateObject.getUTCHours();
+        let minutes = dateObject.getUTCMinutes();
+        let seconds = dateObject.getUTCSeconds();
         
         currentDay.innerHTML= days[day];
         currentHours.innerHTML= hours;
