@@ -7,7 +7,7 @@ function loadTime() {
     let dateObject = new Date();
 
     let day= dateObject.getDay();
-    document.querySelector('[data-testid="currentUTCTime"]').innerHTML = dateObject.getTime();
+    document.querySelector('[data-testid="currentUTCTime"]').innerHTML = dateObject.getUTCMilliseconds();
 
    
     
